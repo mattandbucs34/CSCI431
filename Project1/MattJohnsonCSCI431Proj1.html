@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste of WebGL - Johnson</title>
+</head>
+<script>
+  const main = () => {
+    const canvas = document.getElementById("my_canvas");
+    const gl = canvas.getContext("webgl");
+
+    if(!gl) {
+      alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+      return;
+    }
+
+    gl.clearColor(1.0, 0.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  }
+</script>
+<body>
+  <header>
+    <h1>My name is Matt and this is my first WebGL project!</h1>
+  </header>
+  <canvas id="my_canvas" width="640" height="480"></canvas>
+  <script>main();</script>
+</body>
+</html>
